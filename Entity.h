@@ -16,7 +16,7 @@ public:
     //makes the entity take the damage.
     float takeDamage(float damageAmount);
     //allows enetity to attack
-    float attack(Entity entity);
+    float attack(Entity* entity);
 
 private:
     float m_health;
