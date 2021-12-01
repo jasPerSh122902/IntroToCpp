@@ -1,5 +1,5 @@
 ﻿  Egine.cpp
-  Entity.cpp
   main.cpp
   Generating Code...
-  IntoToCPP.vcxproj -> C:\Users\s218005\Documents\GitHub\IntoToCPP\Debug\IntoToCPP.exe
+Egine.obj : error LNK2001: unresolved external symbol "private: static bool Engine::m_applicationShouldClose" (?m_applicationShouldClose@Engine@@0_NA)
+C:\Users\s218005\Documents\GitHub\IntoToCPP\Debug\IntoToCPP.exe : fatal error LNK1120: 1 unresolved externals
