@@ -18,20 +18,24 @@ Entity::Entity(char icon, float health, float attackPower, float defensePower)
 
 float Entity::takeDamage(float damageAmount)
 {
+	//makes damageTaken = to the amount of damge - form  the defence
 	float damageTaken = damageAmount - getDefencePower();
 
+	//if the damage taken was lower than0
 	if (damageTaken < 0)
-		damageTaken = 0;
-
+		damageTaken = 0;//null
+	//subtracts the health from damage
 	m_health -= damageTaken;
 
+	//if health is going lower than 0 
 	if (m_health < 0)
-		m_health = 0;
+		m_health = 0;//set 0
 
 	return damageTaken;
 }
 
 float Entity::attack(Entity entity)
 {
+	//returns the damage taken and gets the attackpower.
 	return entity.takeDamage(getAttackPower());
 }

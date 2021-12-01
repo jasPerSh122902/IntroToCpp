@@ -1,5 +1,7 @@
 #pragma once
 #include "Entity.h"
+
+//this file is meant to be a out line for the .cpp file that is partered to this file.
 class Engine
 {
 public:
@@ -8,6 +10,7 @@ public:
 	static bool getApplicationShouldClose() { return m_applicationShouldClose; }
 	static void setApplicationSHouldClose(bool value) { m_applicationShouldClose = value; }
 
+	
 private:
 	void start();
 	void update();
