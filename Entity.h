@@ -17,4 +17,5 @@ private:
     float m_attackPower;
     float m_defensePower;
     char  m_icon;
+
 };

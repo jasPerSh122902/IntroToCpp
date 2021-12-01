@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  Egine.cpp
+  Entity.cpp
+  main.cpp
+  Generating Code...
   IntoToCPP.vcxproj -> C:\Users\s218005\Documents\GitHub\IntoToCPP\Debug\IntoToCPP.exe
