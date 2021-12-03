@@ -1,5 +1,5 @@
 #include "Engine.h"
-
+#include <iostream>
 bool Engine::m_applicationShouldClose = false;
 
 //constructor for the engine class
@@ -32,9 +32,9 @@ void Engine::run()
 void Engine::start()
 {
 	//actors that are in the scene
-	Entity wompus = Entity('W', 130002, 40002, 2383);
-	Entity unclePhil = Entity('U', 234544, 233249, 230);
-	Entity skeleto = Entity('s', 234544, 233249, 230);
+	Entity wompus = Entity('W', 100, 400, 200);
+	Entity unclePhil = Entity('U', 500, 239, 20);
+	Entity skeleto = Entity('s', 234, 239, 30);
 
 	//the actors being put in to the enitites array that was made
 	m_entities[0] = wompus;
@@ -47,6 +47,14 @@ void Engine::start()
 	m_currentFighter1 = &m_entities[0];
 	m_currentFighter2 = &m_entities[1];
 	m_currentFighterIndex = 2;
+}
+
+void Engine::draw()
+{
+	m_currentFighter1->printStats();
+	m_currentFighter2->printStats();
+	system("pause");
+	system("cls");
 }
 
 ///updates the current engine.
@@ -81,11 +89,6 @@ void Engine::update()
 	//the oponits fight each other and attacks the other fighter. 
 	m_currentFighter1 -> attack(m_currentFighter2);
 	m_currentFighter2 -> attack(m_currentFighter1);
-
-}
-
-void Engine::draw()
-{
 
 }
 
