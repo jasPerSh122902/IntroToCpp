@@ -3,5 +3,7 @@
 class BattleScene :
 	public Scene
 {
+public:
+	void start() override;
 };
 

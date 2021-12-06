@@ -6,5 +6,6 @@ class StartScene :
 public:
 	void draw() override;
 	void update() override;
+
 };
 
