@@ -5,10 +5,15 @@
 class Scene
 {
 public:
+	//constructor for actor
 	Scene();
+	//a destructor for actor
 	~Scene();
+	//makes the scenes start
 	bool getStarted();
+	//adds the actor to the scene
 	void addActor(Actor* actor);
+	//removes the actor form the scene
 	bool removeActor(Actor* actor);
 
 	virtual void start();
@@ -27,6 +32,11 @@ public:
 
 
 private:
+
+	//this is the example of the pointer pointer array that can decrease and increase.
+	int test = 5;
+	Entity* entityPtrs[5];
+	Entity** entities = new Entity * [test];
 
 	Actor** m_actor;
 	bool m_started;
