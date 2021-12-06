@@ -1,0 +1,29 @@
+#pragma once
+#include "Actor.h"
+#include "Engine.h"
+
+
+
+class SimulationManager :
+	public Actor
+{
+public:
+	SimulationManager();
+	~SimulationManager();
+
+	void start() override;
+	void update() override;
+
+	
+
+private:
+	Entity* m_entities;
+	Entity* m_currentFighter1;
+	Entity* m_currentFighter2;
+
+	int m_currentFighterIndex;
+	int m_entityCount;
+	
+	
+};
+
