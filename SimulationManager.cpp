@@ -1,4 +1,6 @@
 #include "SimulationManager.h"
+#include "StartScene.h"
+#include "BattleScene.h"
 
 SimulationManager::SimulationManager()
 {
@@ -12,11 +14,33 @@ SimulationManager::~SimulationManager()
 
 void SimulationManager::start()
 {
+	//actors that are in the scene
+	Entity wompus = Entity('W', 100, 400, 200);
+	Entity unclePhil = Entity('U', 500, 239, 20);
+	Entity skeleto = Entity('s', 234, 239, 30);
 
+	//the actors being put in to the enitites array that was made
+	m_entities[0] = wompus;
+	m_entities[1] = unclePhil;
+	m_entities[2] = skeleto;
+	//made the entitycounter equal to the number of entityes that i have
+	m_entityCount = 3;
+
+	//this is pointer to pointer array
+	int test = 5;
+	Entity* entityPtrs[5];
+	Entity** entities = new Entity * [test];
+
+	//made the current fighter equal to the respected entity that is in the array.
+	m_currentFighter1 = &m_entities[0];
+	m_currentFighter2 = &m_entities[1];
+	m_currentFighterIndex = 2;
 }
 
 void SimulationManager::update()
 {
+
+	
 
 	//checkes to see if the current fighter 1 has health that is lower than 0 and the current fighter index is lower than the entity counter.
 	if (m_currentFighter1->getHealth() <= 0 && m_currentFighterIndex < m_entityCount)

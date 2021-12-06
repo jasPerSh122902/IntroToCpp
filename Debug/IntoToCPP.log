@@ -1,6 +1,24 @@
-﻿  Engine.cpp
-  Scene.cpp
-C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\Scene.cpp(81,10): warning C4101: 'entityPtrs': unreferenced local variable
+﻿  ActorArray.cpp
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(3,21): error C2653: 'Scene': is not a class or namespace name
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(5,35): error C2065: 'm_actorCount': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(5,52): error C3078: array size must be specified in new expressions
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(8,22): error C2065: 'm_actorCount': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(10,18): error C2065: 'm_actors': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(15,2): error C2065: 'm_actorCount': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(16,2): error C2065: 'm_actors': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(19,24): error C2653: 'Scene': is not a class or namespace name
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(22,35): error C2065: 'm_actorCount': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(22,52): error C3078: array size must be specified in new expressions
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(25,22): error C2065: 'm_actorCount': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(27,18): error C2065: 'm_actors': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(29,7): error C2065: 'm_actors': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(38,10): error C2065: 'm_actors': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(38,18): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(40,3): error C2065: 'm_actors': undeclared identifier
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(54,25): error C2109: subscript requires array or pointer type
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(56,6): error C2109: subscript requires array or pointer type
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(65,15): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(67,20): error C2440: '=': cannot convert from 'Actor **' to 'int'
+C:\Users\s218005\Documents\GitHub\IntoToCPP\IntroToCpp\ActorArray.cpp(67,11): message : There is no context in which this conversion is possible
   SimulationManager.cpp
   Generating Code...
-  IntoToCPP.vcxproj -> C:\Users\s218005\Documents\GitHub\IntoToCPP\Debug\IntoToCPP.exe

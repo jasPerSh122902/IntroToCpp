@@ -1,6 +1,7 @@
 #pragma once
 #include "Actor.h"
 #include "Entity.h"
+#include "ActorArray.h"
 
 class Scene
 {
@@ -13,6 +14,9 @@ public:
 	bool getStarted();
 	//adds the actor to the scene
 	void addActor(Actor* actor);
+
+	bool removeActor(int index);
+
 	//removes the actor form the scene
 	bool removeActor(Actor* actor);
 
@@ -37,7 +41,7 @@ private:
 	Entity* entityPtrs[5];
 	Entity** entities = new Entity * [test];
 
-	Actor** m_actors;
+	ActorArray m_actors;
 	bool m_started;
 	int m_actorCount;
 	
