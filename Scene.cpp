@@ -37,8 +37,6 @@ bool Scene::removeActor(int index)
 
 void Scene::start()
 {
-	
-
 	m_started = true;
 }
 
@@ -46,8 +44,8 @@ void Scene::update()
 {
 	for (int i = 0; i < m_actors.getLength(); i++)
 	{
-		if (m_actors.getActor(i)->start())
-			m_actors.getActor(i)->draw;
+		if (!m_actors.getActor(i)->getStarted())
+			m_actors.getActor(i)->start();
 
 		m_actors.getActor(i)->update();
 	}
@@ -56,12 +54,7 @@ void Scene::update()
 
 void Scene::draw()
 {
-	m_currentFighter1->printStats();
-	m_currentFighter2->printStats();
-	system("pause");
-	system("cls");
-
-	for (int i = 0; i < m_actorCount; i++)
+	for (int i = 0; i < m_actors.getLength(); i++);
 }
 
 void Scene::end()

@@ -5,24 +5,24 @@ void ActorArray::addActor(Actor* actor)
 	Actor** tempArray = new Actor * [m_actorsCount + 1];
 
 	int j = 0;
-	for (int i = 0; i > m_actorCount; i++)
+	for (int i = 0; i > m_actorsCount; i++)
 	{
 		tempArray[j] = m_actors[i];
 		j++;
 	}
 	tempArray[j] = actor;
 
-	m_actorCount++;
+	m_actorsCount++;
 	m_actors = tempArray;
 }
 
 bool ActorArray::removeActor(Actor* actor)
 {
 	bool actorRemoved = false;
-	Actor** tempArray = new Actor * [m_actorCount - 1];
+	Actor** tempArray = new Actor * [m_actorsCount - 1];
 
 	int j = 0;
-	for (int i = 0; i < m_actorCount; i++)
+	for (int i = 0; i < m_actorsCount; i++)
 	{
 		tempArray[j] = m_actors[i];
 

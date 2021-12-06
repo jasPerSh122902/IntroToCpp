@@ -17,5 +17,5 @@ public:
 	virtual void update() {};
 	virtual void draw() {};
 	virtual void end() {};
-
+	virtual void getStarted() {};
 };
