@@ -6,6 +6,7 @@ class Engine
 {
 public:
 	Engine();
+	~Engine();
 	void run();
 	static bool getApplicationShouldClose() { return m_applicationShouldClose; }
 	static void setApplicationSHouldClose(bool value) { m_applicationShouldClose = value; }
@@ -22,6 +23,7 @@ private:
 	Entity m_entities[3];
 	Entity* m_currentFighter1;
 	Entity* m_currentFighter2;
+
 
 	int m_currentFighterIndex;
 	int m_entityCount;

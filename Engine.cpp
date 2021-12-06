@@ -10,6 +10,12 @@ Engine::Engine()
 	m_currentFighterIndex = 0;
 }
 
+Engine::~Engine()
+{
+	delete m_currentFighter1;
+	delete m_currentFighter2;
+}
+
 //definition that is run
 void Engine::run()
 {
@@ -42,6 +48,11 @@ void Engine::start()
 	m_entities[2] = skeleto;
 	//made the entitycounter equal to the number of entityes that i have
 	m_entityCount = 3;
+
+	//this is pointer to pointer array
+	int test = 5;
+	Entity* entityPtrs[5];
+	Entity** entities = new Entity*[test];
 
 	//made the current fighter equal to the respected entity that is in the array.
 	m_currentFighter1 = &m_entities[0];
