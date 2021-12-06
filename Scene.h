@@ -25,11 +25,10 @@ public:
 	Entity* m_currentFighter1;
 	Entity* m_currentFighter2;
 
-
 	int m_currentFighterIndex;
 	int m_entityCount;
 
-
+	int sceneCurrentIndex = 0;
 
 private:
 
@@ -38,10 +37,8 @@ private:
 	Entity* entityPtrs[5];
 	Entity** entities = new Entity * [test];
 
-	Actor** m_actor;
+	Actor** m_actors;
 	bool m_started;
 	int m_actorCount;
-	int scenecurrentIndex = 0;
-
-
+	
 };

@@ -1,8 +1,12 @@
 #include "Engine.h"
-#include "Scene.h"
+#include "StartScene.h"
+#include "BattleScene.h"
 #include <iostream>
 
-bool Engine::m_applicationShouldClose = true;
+bool Engine::m_applicationShouldClose = false;
+int Engine::m_sceneIndex = 0;
+int Engine::m_currentSceneIndex = 0;
+Scene** Engine::m_scenes = new Scene * [0];
 
 //constructor for the engine class
 Engine::Engine()
@@ -38,35 +42,26 @@ void Engine::addScene(Scene* scene)
 {
 
 }
-
-Scene* Engine::getCurrentScene()
-{
-	return nullptr;
-}
-
-void Engine::setCurrentSCene(int index)
-{
-}
-
-
 void Engine::start()
 {
-	
+	StartScene* startScene = new StartScene();
+
+	addScene(startScene);
 }
 
 void Engine::draw()
 {
-
+	m_scenes[m_currentSceneIndex]->draw();
 }
 
 ///updates the current engine.
 void Engine::update()
 {
-
+	m_scenes[m_currentSceneIndex]->update();
 
 }
 
 void Engine::end()
 {
-
+	m_scenes[m_currentSceneIndex ]->end();
 }

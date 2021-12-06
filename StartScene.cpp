@@ -10,11 +10,16 @@ void StartScene::draw()
 
 void StartScene::update()
 {
-	char input[100];
-	std::cin.getline(input, sizeof(input));
-	std::stringstream stream(input)
-	while (stream.rdbuf()->in_avail() != 0) {
-		int n;
-		stream >> n;
-		numbers.push_back(n)
+	int input;
+	std::cin >> input;
+	if (input == 1)
+		Scene::sceneCurrentIndex++;
+	if (input == 2)
+		Scene::end();
+		
+}
+
+StartScene::StartScene()
+{
+	
 }

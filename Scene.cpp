@@ -2,14 +2,16 @@
 #include <iostream>
 #include "SimulationManager.h"
 
-Scene::Scene()
+ Scene::Scene()
 {
-
+	sceneCurrentIndex = 0;
+	 m_started = true;
+	 m_actorCount = 3;
 }
 
 Scene::~Scene()
 {
-
+	
 }
 
 bool Scene::getStarted()
@@ -48,10 +50,12 @@ bool Scene::removeActor(Actor* actor)
 
 		j++;
 	}
-
+	//removes the actor form the scene
 	if (actorRemoved)
 	{
+		//delets that actor
 		delete m_actors;
+		//and makes the array equal to the temArray
 		m_actors = tempArray;
 	}
 
@@ -99,5 +103,5 @@ void Scene::draw()
 
 void Scene::end()
 {
-
+	Engine::setApplicationShouldClose(true);
 }
